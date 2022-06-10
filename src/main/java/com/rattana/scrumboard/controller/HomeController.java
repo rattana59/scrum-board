@@ -9,6 +9,6 @@ public class HomeController {
 
     @RequestMapping("/")
     public String home() {
-        return "Hello Spring Boot!!!  ";
+        return "Hello Spring Boot!!! \\(^O^)/";
     }
 }
