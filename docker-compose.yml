@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:14-alpine
+    volumes:
+      - dev-db-data:/var/lib/posgresql/data
+    environment:
+      - POSTGRES_DB=devdb
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=p@ssw0rd
+      - TZ=GMT+7
+    ports:
+      - '5432:5432'
+    restart: always
+
+volumes:
+  dev-db-data:
+    driver: local
